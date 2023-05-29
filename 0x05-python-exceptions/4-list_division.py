@@ -7,7 +7,8 @@ def list_division(my_list_1, my_list_2, list_length):
             element_1 = my_list_1[i]
             element_2 = my_list_2[i]
 
-            if not isinstance(element_1, (int, float)) or not isinstance(element_2, (int, float)):
+            if not isinstance(element_1, (int, float)) or \
+               not isinstance(element_2, (int, float)):
                 raise TypeError("wrong type")
 
             if element_2 == 0:
