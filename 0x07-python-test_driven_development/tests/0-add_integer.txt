@@ -1,4 +1,3 @@
-"""
 The `0-add_integer` Module
 ==========================
 
@@ -14,7 +13,7 @@ Addition Examples:
 >>> add_integer(5, 3)
 8
 
->>> add_integer(-50,- 50)
+>>> add_integer(-50, -50)
 -100
 
 >>> add_integer(-10, 5)
@@ -77,4 +76,3 @@ OverflowError: cannot convert float infinity to integer
 Traceback (most recent call last):
     ...
 ValueError: cannot convert float NaN to integer
-"""
