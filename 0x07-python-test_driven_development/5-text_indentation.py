@@ -5,27 +5,31 @@ Module composed by a function that prints 2 new lines after ".?:" characters
 
 
 def text_indentation(text):
-    """
-    Prints a text with 2 new lines after each occurrence of '.', '?', and ':' characters.
+    """Prints a text with 2 new lines after each occurrence of '.', '?', and ':' characters.
+
     Args:
-        text: A string representing the input text.
+        text (str): Input string.
+
+    Returns:
+        None
+
     Raises:
         TypeError: If text is not a string.
     """
+
     # Check if text is a string
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
-    # Split the text into sentences using '.', '?', and ':' as delimiters
-    sentences = []
-    current_sentence = ""
-    for char in text:
-        current_sentence += char
-        if char in ['.', '?', ':']:
-            sentences.append(current_sentence.strip())
-            current_sentence = ""
+    s = text[:]  # Create a copy of the input text
 
-    # Print the sentences with 2 new lines after each
-    for sentence in sentences:
-        print(sentence)
-        print()
+    # Split the text by '.', '?', and ':' characters and insert 2 new lines after each occurrence
+    for d in ".?:":
+        list_text = s.split(d)
+        s = ""
+        for i in list_text:
+            i = i.strip(" ")  # Remove leading and trailing spaces from each sentence
+            s = i + d if s is "" else s + "\n\n" + i + d
+
+    print(s[:-3], end="")
+
