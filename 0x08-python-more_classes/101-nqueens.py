@@ -2,7 +2,6 @@
 """
 N-Queens Module
 """
-
 import sys
 
 
@@ -48,13 +47,11 @@ def solve_n_queens(board, col):
     Args:
         board (list): The current state of the chessboard.
         col (int): The current column to check.
-    Returns:
-        bool: True if a solution is found, False otherwise.
     """
     # Base case: All queens are placed
     if col >= N:
         print_solution(board)
-        return True
+        return
 
     # Recursive case: Try placing the queen in each row of the current column
     for i in range(N):
@@ -68,8 +65,6 @@ def solve_n_queens(board, col):
             # Backtrack: Remove the queen from the current cell
             board[i][col] = 0
 
-    return False
-
 
 def print_solution(board):
     """
@@ -79,15 +74,10 @@ def print_solution(board):
     """
     solution = []
     for i in range(N):
-        row = ""
         for j in range(N):
             if board[i][j] == 1:
-                row += "Q"
-            else:
-                row += "."
-        solution.append(row)
-    print("\n".join(solution))
-    print()
+                solution.append([i, j])
+    print(solution)
 
 
 # Validate the number of arguments
