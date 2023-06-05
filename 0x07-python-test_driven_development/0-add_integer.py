@@ -32,6 +32,5 @@ def add_integer(a, b=98):
     # Add the integers a and b
     result = a + b
 
-
     # Return the sum of a and b
     return result
