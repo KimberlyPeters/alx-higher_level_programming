@@ -102,3 +102,18 @@ Test with no argument
     Traceback (most recent call last):
         ...
     TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+Testing With spaces and one new line
+
+    >>> text_indentation("   \n")
+    <BLANKLINE>
+
+Testing With spaces and one new line 2
+
+   >>> text_indentation("   \n   ")
+   <BLANKLINE>
+
+Testing With spaces and one new line 3
+
+   >>> text_indentation("\n   ")
+   <BLANKLINE>
