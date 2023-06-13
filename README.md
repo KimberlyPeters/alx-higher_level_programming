@@ -16,7 +16,7 @@ This repository contains programs written for the Higher-level programming track
 * [0x0B. Python - Input/Output](./0x0B-python-input_output)
 
 ## Author :
-* **[Kimberly Peters](https://github.com/KimberlyPeters)
+* [Kimberly Peters](https://github.com/KimberlyPeters)
 
 ## Acknowledgements :pray:
 
