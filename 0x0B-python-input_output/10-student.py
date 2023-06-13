@@ -33,5 +33,7 @@ class Student:
         """
         if attrs is None:
             return self.__dict__
-        return \
-            {atr: getattr(self, atr) for atr in attrs if hasattr(self, atr)}
+        return {
+            atr: getattr(self, atr)
+            for atr in attrs if hasattr(self, atr)
+            }
