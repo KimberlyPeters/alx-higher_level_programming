@@ -53,6 +53,28 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def update(self, *args, **kwargs):
+        """
+        Updates the attributes of the square.
+
+        Args:
+            *args: List of arguments.
+                   Should contain the id, size, x, and y values.
+            **kwargs: Keyword arguments.
+                      Each key represents an attribute of the instance.
+
+        Returns:
+            None
+        """
+        if args:
+            attrs = ["id", "size", "x", "y"]
+            for i, arg in enumerate(args):
+                if i < len(attrs):
+                    setattr(self, attrs[i], arg)
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
+
     def __str__(self):
         """
         Returns a string representation of the Square instance.
