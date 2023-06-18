@@ -6,6 +6,8 @@ Defines the Base class, which serves as the base
 class for all other classes in this project.
 """
 
+import json
+
 
 class Base:
     """
@@ -33,3 +35,18 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """
+        Converts a list of dictionaries to a JSON string.
+
+        Args:
+            list_dictionaries (list): The list of dictionaries.
+
+        Returns:
+            str: The JSON string representation of the list of dictionaries.
+        """
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return "[]"
+        return json.dumps(list_dictionaries)
